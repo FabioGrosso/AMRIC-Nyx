@@ -1,6 +1,5 @@
 # AMREX_HOME defines the directory in which we will find all the AMReX code
-AMREX_HOME ?= ../../subprojects/amrex
-
+AMREX_HOME = /opt/amrex
 # TOP defines the directory in which we will find Source, Exec, etc
 TOP = ../..
 
@@ -9,17 +8,24 @@ COMP    = gnu
 USE_MPI = TRUE
 # Use with Async IO
 MPI_THREAD_MULTIPLE = FALSE
-USE_OMP = TRUE
+#USE_OMP = TRUE
 USE_CUDA = FALSE
 
 USE_SUNDIALS      = TRUE
 USE_FORT_ODE = FALSE
-SUNDIALS_ROOT ?=  ${CURDIR}/$(TOP)/../sundials/instdir
-
+SUNDIALS_ROOT =  /opt/Nyx/subprojects/sundials/instdir
 PROFILE       = FALSE
 TRACE_PROFILE = FALSE
 COMM_PROFILE  = FALSE
 TINY_PROFILE  = TRUE
+
+USE_HDF5=TRUE
+HDF5_HOME=/opt/hdf5-1.12.2/install
+
+USE_HDF5_SZ3 = TRUE
+#SZ3_HOME = /opt/orisz3/install
+SZ3_HOME = /opt/SZ3/install
+#SZ3_HOME = /opt/SZ_SLE/install
 
 PRECISION = DOUBLE
 USE_SINGLE_PRECISION_PARTICLES = TRUE
